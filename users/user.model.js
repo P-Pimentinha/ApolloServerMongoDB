@@ -17,19 +17,14 @@ const userSchema = new mongoose.Schema({
     return await User.find();
   }
 
- /*  async function addNewUser(name, email) {
-    const user = new User ({
-      name,
-      email,
-    });
-  
+  async function addNewUser(name, email) {
+    const user = new User ({name, email});
     await user.save();
     return user;
-  } */
-
- 
+  }
 
   module.exports = {
     User,
     getAllUsers,
+    addNewUser
   };

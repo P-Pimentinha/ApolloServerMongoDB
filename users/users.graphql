@@ -8,11 +8,11 @@ type User {
     email: String!  
 }
 
-input UserInput {
+""" input UserInput {
     name: String
     email: String
-}
+} """
 
 type Mutation {
-  addNewUser(user: UserInput): User
+  addNewuser(name: String!, email:String!): User
 }
