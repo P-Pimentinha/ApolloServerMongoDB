@@ -23,8 +23,17 @@ const userSchema = new mongoose.Schema({
     return user;
   }
 
+  async function deleteUser(id) {
+    const user = await User.findByIdAndRemove(id);
+    
+    if (!user) return ('The customer with the given ID was not found.');
+
+    return user;
+  }
+
   module.exports = {
     User,
     getAllUsers,
-    addNewUser
+    addNewUser,
+    deleteUser
   };

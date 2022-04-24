@@ -10,6 +10,9 @@ const userModel = require('./user.model');
     addNewUser: (_, args) => {
       return userModel.addNewUser(args.name, args.email);
     },
+    deleteUser: (_, args) => {
+      return userModel.deleteUser(args.id);
+    },
   }
 };
 
